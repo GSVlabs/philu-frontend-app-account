@@ -618,6 +618,10 @@ class AccountSettingsPage extends React.Component {
               emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.dob.empty'])}
               value={this.props.formValues.year_of_birth}
               options={yearOfBirthOptions}
+              helpText={this.props.intl.formatMessage(
+                messages['account.settings.field.year.of.birth.help.text'],
+                { siteName: getConfig().SITE_NAME },
+              )}
               {...editableFieldProps}
             />
             )}

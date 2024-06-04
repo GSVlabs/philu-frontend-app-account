@@ -1,8 +1,10 @@
 export const YEAR_OF_BIRTH_OPTIONS = (() => {
   const currentYear = new Date().getFullYear();
+  const AGE_RESTRICTION = 16;
   const years = [];
   let startYear = currentYear - 120;
-  while (startYear < currentYear) {
+  // Create a list of possible birth years, limiting the minimum user age to 16 years
+  while (startYear < currentYear - AGE_RESTRICTION) {
     startYear += 1;
 
     years.push({ value: startYear, label: startYear });
