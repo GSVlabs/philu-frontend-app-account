@@ -61,6 +61,8 @@ function packAccountCommitData(commitData) {
     }
   }
 
+  packedData.english_proficiency = commitData?.english_proficiency || '';
+
   if (commitData.year_of_birth !== undefined) {
     if (commitData.year_of_birth) {
       packedData.year_of_birth = commitData.year_of_birth;

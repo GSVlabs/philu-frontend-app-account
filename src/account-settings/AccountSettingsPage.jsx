@@ -130,6 +130,10 @@ class AccountSettingsPage extends React.Component {
       value: '',
       label: this.props.intl.formatMessage(messages['account.settings.field.language_proficiencies.options.empty']),
     }].concat(getLanguageList(locale).map(({ code, name }) => ({ value: code, label: name }))),
+    englishLevelProficiencyOptions: [{
+      value: '',
+      label: this.props.intl.formatMessage(messages['account.settings.field.english_level_proficiency.options.empty']),
+    }].concat(this.props.formValues.english_proficiency_options),
     yearOfBirthOptions: [{
       value: '',
       label: this.props.intl.formatMessage(messages['account.settings.field.year_of_birth.options.empty']),
@@ -466,6 +470,7 @@ class AccountSettingsPage extends React.Component {
       countryOptions,
       stateOptions,
       languageProficiencyOptions,
+      englishLevelProficiencyOptions,
       yearOfBirthOptions,
       educationLevelOptions,
       genderOptions,
@@ -692,6 +697,15 @@ class AccountSettingsPage extends React.Component {
             emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.language.proficiencies.empty'])}
             {...editableFieldProps}
           />
+          <EditableSelectField
+            name="english_proficiency"
+            type="select"
+            value={this.props.formValues.english_proficiency}
+            options={englishLevelProficiencyOptions}
+            label={this.props.intl.formatMessage(messages['account.settings.field.english.level.proficiency'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.english_level_proficiency.empty'])}
+            {...editableFieldProps}
+          />
         </div>
         {getConfig().ENABLE_DEMOGRAPHICS_COLLECTION && this.renderDemographicsSection()}
         <div className="account-section pt-3 mb-5" id="social-media">
@@ -855,6 +869,11 @@ AccountSettingsPage.propTypes = {
     level_of_education: PropTypes.string,
     gender: PropTypes.string,
     language_proficiencies: PropTypes.string,
+    english_proficiency: PropTypes.string,
+    english_proficiency_options: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    })),
     pending_name_change: PropTypes.string,
     phone_number: PropTypes.string,
     social_link_linkedin: PropTypes.string,

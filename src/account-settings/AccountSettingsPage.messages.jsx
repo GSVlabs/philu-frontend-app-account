@@ -323,17 +323,17 @@ const messages = defineMessages({
   },
   'account.settings.field.country': {
     id: 'account.settings.field.country',
-    defaultMessage: 'Country',
+    defaultMessage: 'Country of residence',
     description: 'Label for account settings country field.',
   },
   'account.settings.field.country.empty': {
     id: 'account.settings.field.country.empty',
-    defaultMessage: 'Add country',
+    defaultMessage: 'Add country of residence',
     description: 'Placeholder for empty account settings country field.',
   },
   'account.settings.field.country.options.empty': {
     id: 'account.settings.field.country.options.empty',
-    defaultMessage: 'Select a Country',
+    defaultMessage: 'Select a country of residence',
     description: 'Option for empty value on account settings country field.',
   },
   'account.settings.field.state': {
@@ -363,7 +363,7 @@ const messages = defineMessages({
   },
   'account.settings.field.education': {
     id: 'account.settings.field.education',
-    defaultMessage: 'Education',
+    defaultMessage: 'Level of education',
     description: 'Label for account settings education field.',
   },
   'account.settings.field.education.empty': {
@@ -454,18 +454,33 @@ const messages = defineMessages({
   },
   'account.settings.field.language.proficiencies': {
     id: 'account.settings.field.language.proficiencies',
-    defaultMessage: 'Spoken language',
-    description: 'Label for account settings spoken language field.',
+    defaultMessage: 'Native language',
+    description: 'Label for account settings native language field.',
   },
   'account.settings.field.language.proficiencies.empty': {
     id: 'account.settings.field.language.proficiencies.empty',
-    defaultMessage: 'Add a spoken language',
+    defaultMessage: 'Add native language',
     description: 'Placeholder for empty account settings spoken language field.',
   },
   'account.settings.field.language_proficiencies.options.empty': {
     id: 'account.settings.field.language_proficiencies.options.empty',
-    defaultMessage: 'Select a Language',
+    defaultMessage: 'Select a native language',
     description: 'Option for an empty value on account settings spoken language field.',
+  },
+  'account.settings.field.english.level.proficiency': {
+    id: 'account.settings.field.english.level.proficiency',
+    defaultMessage: 'English level proficiency',
+    description: 'Label for account settings english level proficiency field.',
+  },
+  'account.settings.field.english_level_proficiency.empty': {
+    id: 'account.settings.field.english_level_proficiency.empty',
+    defaultMessage: 'Add English level proficiency',
+    description: 'Placeholder for empty account settings english level proficiency field.',
+  },
+  'account.settings.field.english_level_proficiency.options.empty': {
+    id: 'account.settings.field.english_level_proficiency.options.empty',
+    defaultMessage: 'Select an English level proficiency',
+    description: 'Option for an empty value on account settings english level proficiency field.',
   },
 
   'account.settings.field.time.zone': {
