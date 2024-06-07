@@ -44,6 +44,11 @@ const JumpNav = ({
             {intl.formatMessage(messages['account.settings.section.profile.information'])}
           </NavHashLink>
         </li>
+        <li>
+          <NavHashLink to="#my-organization">
+            {intl.formatMessage(messages['account.settings.section.my.organization'])}
+          </NavHashLink>
+        </li>
         {getConfig().ENABLE_DEMOGRAPHICS_COLLECTION && displayDemographicsLink
           && (
           <li>

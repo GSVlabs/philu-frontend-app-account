@@ -61,7 +61,13 @@ function packAccountCommitData(commitData) {
     }
   }
 
-  packedData.english_proficiency = commitData?.english_proficiency || '';
+  if (commitData.english_proficiency !== undefined) {
+    packedData.english_proficiency = commitData.english_proficiency || null;
+  }
+
+  if (commitData.organization !== undefined) {
+    packedData.organization = commitData.organization || null;
+  }
 
   if (commitData.year_of_birth !== undefined) {
     if (commitData.year_of_birth) {
@@ -72,6 +78,48 @@ function packAccountCommitData(commitData) {
     }
   }
   return packedData;
+}
+
+export async function getOrganizations(query) {
+  const requestConfig = {
+    headers: { 'Content-Type': 'application/json' },
+  };
+
+  return getAuthenticatedHttpClient()
+    .get(
+      `${getConfig().LMS_BASE_URL}/onboarding/get-organizations/?query=${query}`,
+      requestConfig,
+    )
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error(`Failed to fetch organizations: ${response.status}`);
+      }
+      return response.data;
+    })
+    .catch((error) => {
+      throw (error);
+    });
+}
+
+export async function getOrganization(id) {
+  const requestConfig = {
+    headers: { 'Content-Type': 'application/json' },
+  };
+
+  return getAuthenticatedHttpClient()
+    .get(
+      `${getConfig().LMS_BASE_URL}/onboarding/organization/?id=${id}`,
+      requestConfig,
+    )
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error(`Failed to fetch organizations: ${response.status}`);
+      }
+      return response.data;
+    })
+    .catch((error) => {
+      throw (error);
+    });
 }
 
 export async function getAccount(username) {
