@@ -101,6 +101,16 @@ const messages = defineMessages({
     defaultMessage: 'Is your organization registered as a 501c3?',
     description: 'Label for the organization registration field.',
   },
+  'account.settings.section.organization.registration.tooltip.first': {
+    id: 'account.settings.section.organization.registration.tooltip.first',
+    defaultMessage: 'Before creating a new organization name, please try a few different ways of spelling or naming your organization to check if someone else from your organization has already registered it.',
+    description: 'Label for the organization registration field tooltip.',
+  },
+  'account.settings.section.organization.registration.tooltip.second': {
+    id: 'account.settings.section.organization.registration.tooltip.second',
+    defaultMessage: 'If you can\'t find your organization in the list and need to create a new organization name, please help future learners from your organization by using the most common name associated with your organization and double-checking the spelling.',
+    description: 'Label for the organization registration field tooltip.',
+  },
   'account.settings.section.number.employees.label': {
     id: 'account.settings.section.number.employees.label',
     defaultMessage: 'Number of employees',

@@ -46,6 +46,13 @@ const CustomFormFields = ({
         <Form.Group controlId="isOrgRegistered">
           <Form.Label isInline>
             {formatMessage(messages['account.settings.section.organization.registration.label'])}
+            <div className="account-tooltip-icon">
+              i
+              <div className="account-tooltip">
+                <p>{formatMessage(messages['account.settings.section.organization.registration.tooltip.first'])}</p>
+                <p>{formatMessage(messages['account.settings.section.organization.registration.tooltip.second'])}</p>
+              </div>
+            </div>
           </Form.Label>
           <Form.Control
             className="is-org-registered"

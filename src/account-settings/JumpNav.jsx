@@ -25,6 +25,7 @@ const JumpNav = ({
         items={[
           'basic-information',
           'profile-information',
+          'my-organization',
           'demographics-information',
           'social-media',
           'site-preferences',

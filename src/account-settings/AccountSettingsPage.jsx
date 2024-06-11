@@ -720,13 +720,7 @@ class AccountSettingsPage extends React.Component {
             type="text"
             value={this.props.formValues.organization}
             customFields={this.props.formValues.custom_fields}
-            label={
-              (
-                <div className="d-flex">
-                  {this.props.intl.formatMessage(messages['account.settings.section.organization.name'])}
-                </div>
-              )
-            }
+            label={this.props.intl.formatMessage(messages['account.settings.section.organization.name'])}
             emptyLabel={this.props.intl.formatMessage(messages['account.settings.section.organization.empty'])}
             helpText={this.props.intl.formatMessage(messages['account.settings.section.organization.help.text'])}
             helpMainText={this.props.intl.formatMessage(messages['account.settings.section.organization.unemployed'])}

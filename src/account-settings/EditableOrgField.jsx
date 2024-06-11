@@ -87,6 +87,7 @@ const EditableField = (props) => {
     setOrgType(value?.org_type);
     setTotalEmployees(value?.total_employees);
     setFormErrors(null);
+    setShowCustomFormFields(false);
     onCancel(name);
   };
 
