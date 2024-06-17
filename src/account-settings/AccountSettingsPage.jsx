@@ -31,6 +31,7 @@ import PageLoading from './PageLoading';
 import JumpNav from './JumpNav';
 import DeleteAccount from './delete-account';
 import EditableField from './EditableField';
+import EditableOrgField from './EditableOrgField';
 import EditableSelectField from './EditableSelectField';
 import ResetPassword from './reset-password';
 import NameChange from './name-change';
@@ -64,6 +65,7 @@ class AccountSettingsPage extends React.Component {
     this.navLinkRefs = {
       '#basic-information': React.createRef(),
       '#profile-information': React.createRef(),
+      '#my-organization': React.createRef(),
       '#demographics-information': React.createRef(),
       '#social-media': React.createRef(),
       '#site-preferences': React.createRef(),
@@ -707,6 +709,27 @@ class AccountSettingsPage extends React.Component {
             {...editableFieldProps}
           />
         </div>
+
+        <div className="account-section pt-3 mb-5" id="my-organization" ref={this.navLinkRefs['#my-organization']}>
+          <h2 className="section-heading h4 mb-3">
+            {this.props.intl.formatMessage(messages['account.settings.section.my.organization'])}
+          </h2>
+
+          <EditableOrgField
+            name="organization"
+            type="text"
+            value={this.props.formValues.organization}
+            customFields={this.props.formValues.custom_fields}
+            label={this.props.intl.formatMessage(messages['account.settings.section.organization.name'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.section.organization.empty'])}
+            helpText={this.props.intl.formatMessage(messages['account.settings.section.organization.help.text'])}
+            helpMainText={this.props.intl.formatMessage(messages['account.settings.section.organization.unemployed'])}
+            onChange={this.handleEditableFieldChange}
+            onSubmit={this.handleSubmit}
+            isEditable
+          />
+        </div>
+
         {getConfig().ENABLE_DEMOGRAPHICS_COLLECTION && this.renderDemographicsSection()}
         <div className="account-section pt-3 mb-5" id="social-media">
           <h2 className="section-heading h4 mb-3">
@@ -869,6 +892,30 @@ AccountSettingsPage.propTypes = {
     level_of_education: PropTypes.string,
     gender: PropTypes.string,
     language_proficiencies: PropTypes.string,
+    organization: PropTypes.shape({
+      id: PropTypes.number,
+      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      total_employees: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      is_org_registered: PropTypes.string,
+      org_type: PropTypes.string,
+    }),
+    custom_fields: PropTypes.shape({
+      total_employee_options: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+          PropTypes.string,
+        ),
+      ),
+      org_type_options: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+          PropTypes.string,
+        ),
+      ),
+      is_org_registered_options: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+          PropTypes.string,
+        ),
+      ),
+    }),
     english_proficiency: PropTypes.string,
     english_proficiency_options: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

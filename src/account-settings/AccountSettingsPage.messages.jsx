@@ -46,6 +46,80 @@ const messages = defineMessages({
     defaultMessage: 'Profile Information',
     description: 'The profile information section heading.',
   },
+  'account.settings.section.my.organization': {
+    id: 'account.settings.section.my.organization',
+    defaultMessage: 'My Organization',
+    description: 'The My Organization section heading.',
+  },
+  'account.settings.section.organization.name': {
+    id: 'account.settings.section.organization.name',
+    defaultMessage: 'Organization name',
+    description: 'The Organization field title.',
+  },
+  'account.settings.section.organization.help.text': {
+    id: 'account.settings.section.organization.help.text',
+    defaultMessage: 'You can choose an organization from the auto-suggestion list or add a new one by entering the name.',
+    description: 'The Organization fielf help text.',
+  },
+  'account.settings.section.organization.empty': {
+    id: 'account.settings.section.organization.empty',
+    defaultMessage: 'Add organization',
+    description: 'Option for empty value on account settings my organization field.',
+  },
+  'account.settings.section.organization.unemployed': {
+    id: 'account.settings.section.organization.unemployed',
+    defaultMessage: 'If you are not affiliated with an organization, leave it blank.',
+    description: 'The Organization fielf help text.',
+  },
+  'account.settings.section.organization.select.info': {
+    id: 'account.settings.section.organization.select.info',
+    defaultMessage: 'We found similar organizations in our system. You can select from the list below.',
+    description: 'Information for user in the drop-down select field of the organization selection',
+  },
+  'account.settings.section.organization.registration.select': {
+    id: 'account.settings.section.organization.registration.select',
+    defaultMessage: 'Select organizationʼs registration',
+    description: 'Default selection for organization registration.',
+  },
+  'account.settings.section.type.organization.select': {
+    id: 'account.settings.section.type.organization.select',
+    defaultMessage: 'Select type of organization',
+    description: 'Default selection for organization type.',
+  },
+  'account.settings.section.number.employees.select': {
+    id: 'account.settings.section.number.employees.select',
+    defaultMessage: 'Select number of employees',
+    description: 'Default selection for number of employees.',
+  },
+  'account.settings.section.type.organization.label': {
+    id: 'account.settings.section.number.employees.select',
+    defaultMessage: 'Type of organization',
+    description: 'Label for the organization type field.',
+  },
+  'account.settings.section.organization.registration.label': {
+    id: 'account.settings.section.organization.registration.label',
+    defaultMessage: 'Is your organization registered as a 501c3?',
+    description: 'Label for the organization registration field.',
+  },
+  'account.settings.section.organization.registration.tooltip.first': {
+    id: 'account.settings.section.organization.registration.tooltip.first',
+    defaultMessage: 'Before creating a new organization name, please try a few different ways of spelling or naming your organization to check if someone else from your organization has already registered it.',
+    description: 'Label for the organization registration field tooltip.',
+  },
+  'account.settings.section.organization.registration.tooltip.second': {
+    id: 'account.settings.section.organization.registration.tooltip.second',
+    defaultMessage: 'If you can\'t find your organization in the list and need to create a new organization name, please help future learners from your organization by using the most common name associated with your organization and double-checking the spelling.',
+    description: 'Label for the organization registration field tooltip.',
+  },
+  'account.settings.section.number.employees.label': {
+    id: 'account.settings.section.number.employees.label',
+    defaultMessage: 'Number of employees',
+    description: 'Label for the number of employees field.',
+  },
+  'account.settings.section.organization.name.length.error': {
+    id: 'account.settings.section.organization.name.length.error',
+    defaultMessage: 'Organization name must be between 2 and 255 characters long.',
+  },
   'account.settings.section.demographics.information': {
     id: 'account.settings.section.demographics.information',
     defaultMessage: 'Optional Information',

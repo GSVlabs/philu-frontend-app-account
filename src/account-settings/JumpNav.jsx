@@ -25,6 +25,7 @@ const JumpNav = ({
         items={[
           'basic-information',
           'profile-information',
+          'my-organization',
           'demographics-information',
           'social-media',
           'site-preferences',
@@ -42,6 +43,11 @@ const JumpNav = ({
         <li>
           <NavHashLink to="#profile-information">
             {intl.formatMessage(messages['account.settings.section.profile.information'])}
+          </NavHashLink>
+        </li>
+        <li>
+          <NavHashLink to="#my-organization">
+            {intl.formatMessage(messages['account.settings.section.my.organization'])}
           </NavHashLink>
         </li>
         {getConfig().ENABLE_DEMOGRAPHICS_COLLECTION && displayDemographicsLink
