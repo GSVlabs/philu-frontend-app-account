@@ -31,7 +31,6 @@ const CustomFormFields = ({
             name="orgType"
             value={orgType}
             onChange={(e) => onHandleChange(e)}
-            trailingElement={<Icon src={ExpandMore} />}
           >
             <option key="default" value="">
               {formatMessage(messages['account.settings.section.type.organization.select'])}
@@ -46,11 +45,10 @@ const CustomFormFields = ({
         <Form.Group controlId="isOrgRegistered">
           <Form.Label isInline>
             {formatMessage(messages['account.settings.section.organization.registration.label'])}
-            <div className="account-tooltip-icon">
+            <div className="account-tooltip-icon custom-fields-tooltip-icon">
               i
               <div className="account-tooltip">
-                <p>{formatMessage(messages['account.settings.section.organization.registration.tooltip.first'])}</p>
-                <p>{formatMessage(messages['account.settings.section.organization.registration.tooltip.second'])}</p>
+                <p>{formatMessage(messages['account.settings.section.organization.registration.tooltip'])}</p>
               </div>
             </div>
           </Form.Label>
@@ -60,7 +58,6 @@ const CustomFormFields = ({
             name="isOrgRegistered"
             value={isOrgRegistered}
             onChange={(e) => onHandleChange(e)}
-            trailingElement={<Icon src={ExpandMore} />}
           >
             <option key="default" value="">
               {formatMessage(messages['account.settings.section.organization.registration.select'])}
@@ -82,7 +79,6 @@ const CustomFormFields = ({
             name="totalEmployees"
             value={totalEmployees}
             onChange={(e) => onHandleChange(e)}
-            trailingElement={<Icon src={ExpandMore} />}
           >
             <option key="default" value="">
               {formatMessage(messages['account.settings.section.number.employees.select'])}
