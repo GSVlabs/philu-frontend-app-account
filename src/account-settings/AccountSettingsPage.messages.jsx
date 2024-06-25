@@ -307,7 +307,7 @@ const messages = defineMessages({
   },
   'account.settings.field.year.of.birth.help.text': {
     id: 'account.settings.field.year.of.birth.help.text',
-    defaultMessage: 'You must be 16 years old or above to have an account with {siteName}.',
+    defaultMessage: 'You must be 16 years old or older to have an account with {siteName}.',
     description: 'Help text for the account settings year of birth field.',
   },
   'account.settings.field.secondary.email': {
