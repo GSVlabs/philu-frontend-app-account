@@ -250,7 +250,16 @@ const EditableField = (props) => {
                 controlId={id}
                 isInvalid={error != null}
               >
-                <Form.Label size="sm" className="h6 d-block" htmlFor={id}>{label}</Form.Label>
+                <Form.Label size="sm" className="h6 d-block" htmlFor={id}>
+                  {label}
+                  <div className="account-tooltip-icon organization-tooltip-icon">
+                    i
+                    <div className="account-tooltip">
+                      <p>{formatMessage(messages['account.settings.section.organization.name.tooltip.first'])}</p>
+                      <p>{formatMessage(messages['account.settings.section.organization.name.tooltip.second'])}</p>
+                    </div>
+                  </div>
+                </Form.Label>
                 <OrganizationFormField
                   orgLabel={orgLabel}
                   orgId={orgId}

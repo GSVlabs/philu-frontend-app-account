@@ -101,14 +101,19 @@ const messages = defineMessages({
     defaultMessage: 'Is your organization registered as a 501c3?',
     description: 'Label for the organization registration field.',
   },
-  'account.settings.section.organization.registration.tooltip.first': {
-    id: 'account.settings.section.organization.registration.tooltip.first',
+  'account.settings.section.organization.name.tooltip.first': {
+    id: 'account.settings.section.organization.name.tooltip.first',
     defaultMessage: 'Before creating a new organization name, please try a few different ways of spelling or naming your organization to check if someone else from your organization has already registered it.',
-    description: 'Label for the organization registration field tooltip.',
+    description: 'Label for the organization name field tooltip.',
   },
-  'account.settings.section.organization.registration.tooltip.second': {
-    id: 'account.settings.section.organization.registration.tooltip.second',
+  'account.settings.section.organization.name.tooltip.second': {
+    id: 'account.settings.section.organization.name.tooltip.second',
     defaultMessage: 'If you can\'t find your organization in the list and need to create a new organization name, please help future learners from your organization by using the most common name associated with your organization and double-checking the spelling.',
+    description: 'Label for the organization name field tooltip.',
+  },
+  'account.settings.section.organization.registration.tooltip': {
+    id: 'account.settings.section.organization.registration.tooltip',
+    defaultMessage: 'A 501c3 is a nonprofit organization that has been recognized by the United States of America IRS as being tax-exempt by virtue of its charitable programs.',
     description: 'Label for the organization registration field tooltip.',
   },
   'account.settings.section.number.employees.label': {

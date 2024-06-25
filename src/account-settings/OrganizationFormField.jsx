@@ -155,9 +155,9 @@ const OrganizationFormField = (props) => {
         styles={customStyles}
       />
       {formErrors?.name && (
-        <div className="text-danger mt-2" style={{ fontSize: '0.7em' }}>
+        <Form.Control.Feedback type="invalid" hasIcon={false}>
           {formErrors?.name}
-        </div>
+        </Form.Control.Feedback>
       )}
       <Form.Text>{helpText}</Form.Text>
       {showCustomFormFields && (
