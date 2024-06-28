@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
@@ -22,7 +22,7 @@ import {
 import { editableFieldSelector } from './data/selectors';
 import CertificatePreference from './certificate-preference/CertificatePreference';
 
-const EditableField = (props) => {
+const EditableOrgField = (props) => {
   const {
     name,
     label,
@@ -80,7 +80,7 @@ const EditableField = (props) => {
     onEdit(name);
   };
 
-  const handleCancel = () => {
+  const handleCancel = useCallback(() => {
     setOrgLabel(value?.label);
     setOrgId(value?.id);
     setIsOrgRegistered(value?.is_org_registered);
@@ -89,7 +89,13 @@ const EditableField = (props) => {
     setFormErrors(null);
     setShowCustomFormFields(false);
     onCancel(name);
-  };
+  }, [name, value, onCancel]);
+
+  useEffect(() => {
+    if (!isEditing) {
+      handleCancel();
+    }
+  }, [isEditing, handleCancel]);
 
   const handleChange = (event) => {
     const newValue = event.target.value;
@@ -334,7 +340,7 @@ const EditableField = (props) => {
   );
 };
 
-EditableField.propTypes = {
+EditableOrgField.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -385,7 +391,7 @@ EditableField.propTypes = {
   intl: intlShape.isRequired,
 };
 
-EditableField.defaultProps = {
+EditableOrgField.defaultProps = {
   saveState: undefined,
   label: undefined,
   value: undefined,
@@ -405,4 +411,4 @@ EditableField.defaultProps = {
 export default connect(editableFieldSelector, {
   onEdit: openForm,
   onCancel: closeForm,
-})(injectIntl(EditableField));
+})(injectIntl(EditableOrgField));
