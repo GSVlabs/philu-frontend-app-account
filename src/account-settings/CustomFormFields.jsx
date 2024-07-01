@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { useIntl } from '@edx/frontend-platform/i18n';
-import { Form, Icon } from '@edx/paragon';
-import { ExpandMore } from '@edx/paragon/icons';
+import { Form } from '@edx/paragon';
 import PropTypes from 'prop-types';
 
 import messages from './AccountSettingsPage.messages';
