@@ -83,6 +83,7 @@ const EditableOrgField = (props) => {
   const handleCancel = useCallback(() => {
     setOrgLabel(value?.label);
     setOrgId(value?.id);
+    setOptions([]);
     setIsOrgRegistered(value?.is_org_registered);
     setOrgType(value?.org_type);
     setTotalEmployees(value?.total_employees);
